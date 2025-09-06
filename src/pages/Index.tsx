@@ -625,17 +625,19 @@ const Index = () => {
         </TabsContent>
       </Tabs>
 
-      <style jsx>{`
-        @media print {
-          body { -webkit-print-color-adjust: exact; }
-          .print\\:hidden { display: none !important; }
-          .print\\:shadow-none { box-shadow: none !important; }
-          .print\\:rounded-none { border-radius: 0 !important; }
-          .print\\:bg-white { background-color: white !important; }
-          .print\\:p-0 { padding: 0 !important; }
-          .print\\:max-w-full { max-width: 100% !important; }
-        }
-      `}</style>
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @media print {
+            body { -webkit-print-color-adjust: exact; }
+            .print\\:hidden { display: none !important; }
+            .print\\:shadow-none { box-shadow: none !important; }
+            .print\\:rounded-none { border-radius: 0 !important; }
+            .print\\:bg-white { background-color: white !important; }
+            .print\\:p-0 { padding: 0 !important; }
+            .print\\:max-w-full { max-width: 100% !important; }
+          }
+        `
+      }} />
     </div>
   );
 };
